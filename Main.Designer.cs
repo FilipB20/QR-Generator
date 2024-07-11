@@ -1,6 +1,6 @@
 ﻿namespace QR_Generator
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             pictureBox1 = new PictureBox();
             textBox5 = new TextBox();
-            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -104,30 +104,31 @@
             textBox5.TextAlign = HorizontalAlignment.Center;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
-            // button1
+            // button2
             // 
-            button1.BackColor = Color.White;
-            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(148, 217);
-            button1.Name = "button1";
-            button1.Size = new Size(114, 27);
-            button1.TabIndex = 6;
-            button1.Text = "GENERATE";
-            button1.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.White;
+            button2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(152, 217);
+            button2.Name = "button2";
+            button2.Size = new Size(114, 27);
+            button2.TabIndex = 7;
+            button2.Text = "GENERATE";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += this.button2_Click;
             // 
-            // Form1
+            // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(415, 466);
-            Controls.Add(button1);
+            Controls.Add(button2);
             Controls.Add(textBox5);
             Controls.Add(pictureBox1);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Name = "Form1";
+            Name = "Main";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -142,6 +143,6 @@
         private TextBox textBox4;
         private PictureBox pictureBox1;
         private TextBox textBox5;
-        private Button button1;
+        private Button button2;
     }
 }

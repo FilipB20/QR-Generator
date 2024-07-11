@@ -1,15 +1,16 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Drawing.Imaging;
+using QR_Generator;
 
 namespace QR_Generator
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        string firstName;
-        string lastName;
-        string company;
-        string mail;
-        public Form1()
+        string firstName { public get; set; }
+        string lastName { get; set; }
+        string company { get; set; }
+        string mail { get; set; }
+        public Main()
         {
             InitializeComponent();
             string firstName = "";
@@ -44,6 +45,11 @@ namespace QR_Generator
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
