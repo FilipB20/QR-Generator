@@ -6,7 +6,8 @@ namespace QR_Generator
 {
     public partial class Main : Form
     {
-        string firstName { public get; set; }
+        Form generator;
+        string firstName { get; set; }
         string lastName { get; set; }
         string company { get; set; }
         string mail { get; set; }
@@ -17,6 +18,11 @@ namespace QR_Generator
             string lastName = "";
             string company = "";
             string mail="";
+        }
+
+        public string GetQRData()
+        {
+            return $"{firstName} {lastName} {company} {mail}";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)//LAST NAME
@@ -49,9 +55,10 @@ namespace QR_Generator
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//GENERATE
         {
-
+            generator = new Generator(this);
+            generator.Show();
         }
     }
 }
