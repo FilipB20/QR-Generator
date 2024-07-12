@@ -13,7 +13,8 @@ namespace QR_Generator
         public string mail { get; private set; }
 
         public string FormattedName { get; private set; }
-
+        
+        public string password {  get; private set; }
 
 
         public Main()
@@ -23,6 +24,7 @@ namespace QR_Generator
             string lastName = "";
             string company = "";
             string mail="";
+            string password = "";
         }
 
         public string GetQRData()
