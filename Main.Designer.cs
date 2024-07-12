@@ -106,7 +106,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.White;
+            button2.BackColor = SystemColors.Control;
             button2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.Location = new Point(152, 217);
             button2.Name = "button2";
@@ -114,7 +114,7 @@
             button2.TabIndex = 7;
             button2.Text = "GENERATE";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += this.button2_Click;
+            button2.Click += button2_Click;
             // 
             // Main
             // 

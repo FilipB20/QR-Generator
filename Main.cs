@@ -7,10 +7,15 @@ namespace QR_Generator
     public partial class Main : Form
     {
         Form generator;
-        string firstName { get; set; }
-        string lastName { get; set; }
-        string company { get; set; }
-        string mail { get; set; }
+        public string firstName { get; private set; }
+        public string lastName { get; private set; }
+        public string company { get; private set; }
+        public string mail { get; private set; }
+
+        public string FormattedName { get; private set; }
+
+
+
         public Main()
         {
             InitializeComponent();
