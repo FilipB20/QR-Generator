@@ -13,8 +13,8 @@ namespace QR_Generator
         public string mail { get; private set; }
 
         public string FormattedName { get; private set; }
-        
-        public string password {  get; private set; }
+
+        public string password { get; private set; }
 
 
         public Main()
@@ -23,7 +23,7 @@ namespace QR_Generator
             string firstName = "";
             string lastName = "";
             string company = "";
-            string mail="";
+            string mail = "";
             string password = "";
         }
 
@@ -32,9 +32,14 @@ namespace QR_Generator
             return $"{firstName} {lastName} {company} {mail}";
         }
 
+        public void SetPassword(string password)
+        {
+            this.password = password;
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)//LAST NAME
         {
-            lastName= textBox2.Text;
+            lastName = textBox2.Text;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)//title
@@ -44,7 +49,7 @@ namespace QR_Generator
 
         private void textBox1_TextChanged(object sender, EventArgs e)//FIRST NAME
         {
-            firstName=textBox1.Text;
+            firstName = textBox1.Text;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)//COMPANY
@@ -54,18 +59,34 @@ namespace QR_Generator
 
         private void textBox3_TextChanged(object sender, EventArgs e)//EMAIL
         {
-            mail=textBox3.Text;
+            mail = textBox3.Text;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)//GENERATE
+        private void ShowGenerator(Main main)
         {
             generator = new Generator(this);
             generator.Show();
+        }
+        private void button2_Click(object sender, EventArgs e)//GENERATE
+        {
+            if (firstName == null || lastName == null || mail == null || company == null)
+            {
+                button2.Text = "Please input all required fields!";
+            }
+            else
+            {
+                button2.Text = "GENERATE";
+                ShowGenerator(this);
+            }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

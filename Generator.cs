@@ -21,6 +21,8 @@ namespace QR_Generator
         QRCodeGenerator qrGenerator;
         QRCodeData qrData;
         Bitmap qrImage;
+        QRCode qrCode;
+        EmailSender emailSender;
         public Generator(Main main)
         {
             mainForm = main;
@@ -33,8 +35,14 @@ namespace QR_Generator
         {
             qrGenerator = new QRCodeGenerator();
             qrData = qrGenerator.CreateQrCode(GenerateVCard(), QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrData);
+            qrCode = new QRCode(qrData);
             qrImage = qrCode.GetGraphic(5);
+            qrImage.Save("qrCode.png");
+        }
+
+        public QRCode GetQRCode()
+        {
+            return qrCode;
         }
 
         private string GenerateVCard()
@@ -51,9 +59,9 @@ namespace QR_Generator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MailSender mailSender = new MailSender();
             PasswordEnterer passwordEnterer = new PasswordEnterer(mainForm);
             passwordEnterer.Show();
+            
         }
     }
 }

@@ -29,21 +29,34 @@
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 41);
+            textBox1.Location = new Point(12, 12);
             textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '*';
             textBox1.Size = new Size(194, 23);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            textBox2.Location = new Point(12, 41);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(194, 65);
+            textBox2.TabIndex = 1;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // PasswordEnterer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(218, 118);
+            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "PasswordEnterer";
             Text = "PasswordEnterer";
@@ -54,5 +67,6 @@
         #endregion
 
         private TextBox textBox1;
+        private TextBox textBox2;
     }
 }
